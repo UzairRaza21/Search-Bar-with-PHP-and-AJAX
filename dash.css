@@ -181,13 +181,10 @@ nav {
     margin: 20px 10px;
     border-radius:5px;
     transition: all 500ms;
-    box-shadow: 1px 1px 10px 2px #cfdfea;
     float: left;
     flex-wrap: nowrap;
 }
-.flex-item:hover{
-    box-shadow: 1px 1px 10px 2px #085080;
-}
+
 .dash-cart-img{
     flex-basis: 60%;
 }
@@ -210,6 +207,10 @@ nav {
     border-radius: 5px;
     overflow: hidden;
     height: auto;
+    box-shadow: 1px 1px 10px 2px #cfdfea;
+}
+.dash-cart:hover{
+    box-shadow: 1px 1px 10px 2px #085080;
 }
 
 .dash-cart-data{

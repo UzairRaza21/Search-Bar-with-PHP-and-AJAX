@@ -51,9 +51,7 @@
     <input type="text" id="search" autocomplete="off">
 </div>
 
-<tr>
-    <td id="table-data"></td>
-</tr>
+
 
 <!-- Live Search HTML Code End -->
 
@@ -79,7 +77,7 @@
     
         <div class="flex-item" id="product-cart">
 
-            <div class="dash-cart">
+            <div class="dash-cart" id="dash-cart-data">
                     <!-- Cart display Product Start-->
                     <div class="dash-cart-img"><?php echo "<img src='uploaded-Products/".$row['ad_img']."' >"  ?></div>
 
@@ -92,7 +90,9 @@
                     </div>
 
                     <!-- Cart display Product End -->
-            </div>            
+            </div>  
+            
+
 
         </div>
 
@@ -108,24 +108,30 @@
 <!-- Products Uploaded with PHP end -->
     
 
-
+<script src="jquery.js"></script>
     <script src="app.js"></script>
 <!-- Live Search -->
     <script>
+        $(document).ready(function(){
 
-    $('#search').on("keyup",function(){
-        var search_term = $(this).val();
+        $('#search').on("keyup",function(e){
+       var search_term = $(this).val();
         $.ajax({
             url : "ajax-live-search.php",
             type : "POST",
-            data : {search:search_term},
+           data : {search:search_term},
             success : function(data){
-                $("#table-data").html(data);
+                $("#dash-cart-data").html(data);
             } 
 
         })
     });
 
+
+        })
+
+
     </script>
+
   </body>
   </html>
