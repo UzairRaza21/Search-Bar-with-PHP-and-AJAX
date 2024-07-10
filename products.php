@@ -1,10 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ads Listing</title>
+    <!-- Uncomment the line below if property.css is needed -->
     <!-- <link rel="stylesheet" href="property.css"> -->
     <link rel="stylesheet" href="dash.css">
 </head>
@@ -12,7 +12,7 @@
     <!-- Nav Start -->
     <nav>
         <div id="logo-pic">
-            <img src="lmages/dash-logo-removebg.png" alt="threads" width="180" height="60">
+            <img src="images/dash-logo-removebg.png" alt="threads" width="180" height="60">
         </div>
         
         <div>
@@ -26,118 +26,100 @@
         </div>
 
         <div id="menu" onclick="openMenu()">
-            <img src="lmages/hamburger.png" alt="menu" width="20">
+            <img src="images/hamburger.png" alt="menu" width="20">
         </div>
     </nav>
     
-    <div id="nav-col" >
+    <div id="nav-col">
         <div id="nav-col-links" class="nav-col-links">
-                    <a id="link" href="dashboard.php">Dashboard</a>
-                    <a id="link" href="products-upload.php">Upload Ads</a>
-                    <a id="link" href="productlist.php">Ads List</a>
-                    <a id="link" href="products.php">Goto Website</a>
-                    <a id="link" href="logout.php">Logout</a>
-                    
+            <a href="dashboard.php">Dashboard</a>
+            <a href="products-upload.php">Upload Ads</a>
+            <a href="productlist.php">Ads List</a>
+            <a href="products.php">Goto Website</a>
+            <a href="logout.php">Logout</a>
         </div>
     </div>
     <!-- Nav End -->
-<div class="ads-hero-section">
-    <h1>Property Listings</h1>
-</div>
 
-<!-- Live Search HTML Code Start -->
-<div class="ads-search-bar" >
-    <label for="Search">Search :</label>
-    <input type="text" id="search" autocomplete="off" placeholder="Search Property here">
-</div>
+    <div class="ads-hero-section">
+        <h1>Property Listings</h1>
+    </div>
 
+    <!-- Live Search HTML Code Start -->
+    <div class="ads-search-bar" >
+        <label for="search">Search :</label>
+        <input type="text" id="search" autocomplete="off" placeholder="Search Property here">
+    </div>
+    <!-- Live Search HTML Code End -->
 
-
-<!-- Live Search HTML Code End -->
-
-<!-- Products Uploaded with PHP start -->
-<?php
-        include("conn.php");
-        $sql = "SELECT * FROM `ads`";
-        $result = mysqli_query($conn, $sql);
-        $row = mysqli_num_rows($result);
-       
+    <!-- Products Uploaded with PHP start -->
+    <div id="ads-container" class="ads-flex-container" >
+        <?php
+            include("conn.php");
+            $sql = "SELECT * FROM `ads`";
+            $result = mysqli_query($conn, $sql);
+            $row = mysqli_num_rows($result);
         ?>
         
-         <!-- Product Cart HTML Start -->         
-           <?php
-        if ($row > 0) {
-
-            while ($row = mysqli_fetch_assoc($result)) {
-
+        <!-- Product Cart HTML Start -->
+        <?php
+            if ($row > 0) {
+                while ($row = mysqli_fetch_assoc($result)) {
         ?>
-
-    <div class="ads-flex-container">
-
-    
-        <div class="flex-item" id="product-cart">
-
-            <div class="dash-cart" id="dash-cart-data">
-                    <!-- Cart display Product Start-->
-                    <div class="dash-cart-img"><?php echo "<img src='uploaded-Products/".$row['ad_img']."' >"  ?></div>
-
-                    <div class="dash-cart-data">
-                    <p class="dash-address">Street Address : <?php echo $row['ad_address']?></p>
-                    <p class="dash-sub-heading">City :  <?php echo $row['ad_city']?></p>
-                    <p class="dash-sub-heading">Zip Code :  <?php echo $row['ad_zipcode']?></p>
-                    <p class="dash-sub-heading">Price : $<?php echo $row['ad_price']?></p>
-                    <p class="dash-sub-heading">Number of Bedrooms :  <?php echo $row['ad_bedroom']?></p>
-                    <p class="dash-sub-heading">Number of Bathrooms :  <?php echo $row['ad_bathroom']?></p>
-                    <p class="dash-sub-heading">Built Year :  <?php echo $row['ad_year']?></p>
-                    <p class="dash-sub-heading">Size : <?php echo $row['ad_size']?> Sq Ft.</p>
-                    <p class="dash-sub-heading">Buyer's Agent Compensation: $<?php echo $row['ad_commission']?></p>
-                    <p class="dash-sub-heading">Seller's Agent Name :  <?php echo $row['ad_agent_name']?></p>
-                    <p class="dash-sub-heading">Seller's Agent Phone :  <?php echo $row['ad_agent_phone']?></p>
+            <div class="flex-item">
+                <div class="dash-cart" id="dash-cart-data">
+                    <!-- Cart display Product Start -->
+                    <div class="dash-cart-img">
+                        <?php echo "<img src='uploaded-Products/" . $row['ad_img'] . "' >"; ?>
                     </div>
-
+                    <div class="dash-cart-data">
+                        <p class="dash-address">Street Address : <?php echo $row['ad_address']; ?></p>
+                        <p class="dash-sub-heading">City : <?php echo $row['ad_city']; ?></p>
+                        <p class="dash-sub-heading">Zip Code : <?php echo $row['ad_zipcode']; ?></p>
+                        <p class="dash-sub-heading">Price : $<?php echo $row['ad_price']; ?></p>
+                        <p class="dash-sub-heading">Number of Bedrooms : <?php echo $row['ad_bedroom']; ?></p>
+                        <p class="dash-sub-heading">Number of Bathrooms : <?php echo $row['ad_bathroom']; ?></p>
+                        <p class="dash-sub-heading">Built Year : <?php echo $row['ad_year']; ?></p>
+                        <p class="dash-sub-heading">Size : <?php echo $row['ad_size']; ?> Sq Ft.</p>
+                        <p class="dash-sub-heading">Buyer's Agent Compensation: $<?php echo $row['ad_commission']; ?></p>
+                        <p class="dash-sub-heading">Seller's Agent Name : <?php echo $row['ad_agent_name']; ?></p>
+                        <p class="dash-sub-heading">Seller's Agent Phone : <?php echo $row['ad_agent_phone']; ?></p>
+                    </div>
                     <!-- Cart display Product End -->
-            </div>  
-            
+                </div>
+            </div>
 
-
-        </div>
-
-    </div>
-     <?php
+        <?php
+                }
+            } else {
+                echo "<h4>No Products</h4>";
             }
-        }else {
-            echo "<h4>No Products</h4>";
-        };
         ?>
-<!-- Product Cart HTML End -->
-     
-<!-- Products Uploaded with PHP end -->
-    
+        <!-- Product Cart HTML End -->
+    </div>
+    <!-- Products Uploaded with PHP end -->
 
-<script src="jquery.js"></script>
+    <script src="jquery.js"></script>
     <script src="app.js"></script>
-<!-- Live Search -->
+    <!-- Live Search -->
     <script>
         $(document).ready(function(){
-
-        $('#search').on("keyup",function(e){
-       var search_term = $(this).val();
-        $.ajax({
-            url : "ajax-live-search.php",
-            type : "POST",
-           data : {search:search_term},
-            success : function(data){
-                $("#dash-cart-data").html(data);
-            } 
-
-        })
-    });
-
-
-        })
-
-
+            $('#search').on("keyup", function(e) {
+                var search_term = $(this).val();
+                $.ajax({
+                    url: "ajax-live-search.php",
+                    type: "POST",
+                    data: { search: search_term },
+                    success: function(data) {
+                        if (data) {
+                            $("#ads-container").html(data);
+                        } else {
+                            $("#ads-container").html("<h4>No Products</h4>");
+                        }
+                    }
+                });
+            });
+        });
     </script>
-
-  </body>
-  </html>
+</body>
+</html>

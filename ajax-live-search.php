@@ -10,13 +10,15 @@ $output = "";
 if(mysqli_num_rows($result) > 0){
     $output = "";
     while($row = mysqli_fetch_assoc($result)){
-        $output .= '<div class="dash-cart">
-
+        $output .= '
+        <div class="flex-item">
+                    <div class="dash-cart">
+                    
                     <div class="dash-cart-img"><img src="uploaded-Products/' . $row["ad_img"] . '" alt="Ad Image"></div>
 
                     <div class="dash-cart-data">
-                    <p class="dash-address">Street Address : ' . $row["ad_address"] . '</p>
-                    <p class="dash-sub-heading">City :' . $row["ad_city"] . '</p>
+                    <p class="dash-address">Street Address : ' . $row["ad_address"] .'</p>
+                    <p class="dash-sub-heading">City : ' . $row["ad_city"] . '</p>
                     <p class="dash-sub-heading">Zip Code : ' . $row["ad_zipcode"] . '</p>
                     <p class="dash-sub-heading">Price : ' . $row["ad_price"] . '</p>
                     <p class="dash-sub-heading">Number of Bedrooms : ' . $row["ad_bedroom"] . '</p>
@@ -28,7 +30,8 @@ if(mysqli_num_rows($result) > 0){
                     <p class="dash-sub-heading">Seller Agent Phone : ' . $row["ad_agent_phone"] . '</p>
                     </div>
 
-                </div>';
+                    </div>
+        </div>';
     }
 
     $output .= '</div>';
