@@ -71,9 +71,22 @@
                             // Display main image
                             $image_names = json_decode($row['ad_img'], true);
                             if (is_array($image_names) && count($image_names) > 0) {
-                                echo '<img src="uploaded-Products/' . htmlspecialchars($image_names[0]) . '" alt="Product Image">';
+                                // Loop through each image to find the existing one and display it
+                                foreach ($image_names as $image) {
+                                    $image_path = "uploaded-Products/" . htmlspecialchars($image);
+                                    if (file_exists($image_path)) {
+                                        echo '<img src="' . $image_path . '" alt="Product Image">';
+                                        break; // Display only the first image
+                                    }
+                                }
                             } else {
-                                echo '<img src="uploaded-Products/' . htmlspecialchars($row['ad_img']) . '" alt="Product Image">';
+                                // Single image case
+                                $image_path = "uploaded-Products/" . htmlspecialchars($row['ad_img']);
+                                if (file_exists($image_path)) {
+                                    echo '<img src="' . $image_path . '" alt="Product Image">';
+                                } else {
+                                    echo '<img src="default-image.jpg" alt="Default Image">';
+                                }
                             }
                             ?>
                         </div>
