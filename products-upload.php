@@ -112,7 +112,7 @@ if (!isset($_SESSION['admin_name'])){
 
             <div class="product-form-field">
             <label for="">Property Image</label>
-            <input type="file" name="property_image" style="margin-left: 10px;"> 
+            <input type="file" name="property_image[]" multiple style="margin-left: 10px;"> 
             </div><br>
 
             <input type="submit" value="Upload" name="upload_ad" class="product-upload-button"  style="margin-left: 250px;">

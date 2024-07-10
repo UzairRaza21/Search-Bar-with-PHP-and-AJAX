@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ads Listing</title>
-    <!-- Uncomment the line below if property.css is needed -->
-    <!-- <link rel="stylesheet" href="property.css"> -->
     <link rel="stylesheet" href="dash.css">
+    <!-- Include Slick Slider CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
 </head>
 <body>
     <!-- Nav Start -->
@@ -53,49 +54,53 @@
     <!-- Live Search HTML Code End -->
 
     <!-- Products Uploaded with PHP start -->
-    <div id="ads-container" class="ads-flex-container" >
-        <?php
-            include("conn.php");
-            $sql = "SELECT * FROM `ads`";
-            $result = mysqli_query($conn, $sql);
-            $row = mysqli_num_rows($result);
-        ?>
-        
-        <!-- Product Cart HTML Start -->
-        <?php
-            if ($row > 0) {
-                while ($row = mysqli_fetch_assoc($result)) {
-        ?>
-            <div class="flex-item">
-                <div class="dash-cart" id="dash-cart-data">
-                    <!-- Cart display Product Start -->
-                    <div class="dash-cart-img">
-                        <?php echo "<img src='uploaded-Products/" . $row['ad_img'] . "' >"; ?>
-                    </div>
-                    <div class="dash-cart-data">
-                        <p class="dash-address">Street Address : <?php echo $row['ad_address']; ?></p>
-                        <p class="dash-sub-heading">City : <?php echo $row['ad_city']; ?></p>
-                        <p class="dash-sub-heading">Zip Code : <?php echo $row['ad_zipcode']; ?></p>
-                        <p class="dash-sub-heading">Price : $<?php echo $row['ad_price']; ?></p>
-                        <p class="dash-sub-heading">Number of Bedrooms : <?php echo $row['ad_bedroom']; ?></p>
-                        <p class="dash-sub-heading">Number of Bathrooms : <?php echo $row['ad_bathroom']; ?></p>
-                        <p class="dash-sub-heading">Built Year : <?php echo $row['ad_year']; ?></p>
-                        <p class="dash-sub-heading">Size : <?php echo $row['ad_size']; ?> Sq Ft.</p>
-                        <p class="dash-sub-heading">Buyer's Agent Compensation: $<?php echo $row['ad_commission']; ?></p>
-                        <p class="dash-sub-heading">Seller's Agent Name : <?php echo $row['ad_agent_name']; ?></p>
-                        <p class="dash-sub-heading">Seller's Agent Phone : <?php echo $row['ad_agent_phone']; ?></p>
-                    </div>
-                    <!-- Cart display Product End -->
-                </div>
-            </div>
 
+    <div id="ads-container" class="ads-flex-container">
         <?php
-                }
-            } else {
-                echo "<h4>No Products</h4>";
+        include("conn.php");
+        $sql = "SELECT * FROM ads";
+        $result = mysqli_query($conn, $sql);
+
+        if (mysqli_num_rows($result) > 0) {
+            while ($row = mysqli_fetch_assoc($result)) {
+        ?> 
+                <div class="flex-item">
+                    <div class="dash-cart">
+                        <div class="dash-cart-img">
+                            <?php 
+                            // Display main image
+                            $image_names = json_decode($row['ad_img'], true);
+                            if (is_array($image_names) && count($image_names) > 0) {
+                                echo '<img src="uploaded-Products/' . htmlspecialchars($image_names[0]) . '" alt="Product Image">';
+                            } else {
+                                echo '<img src="uploaded-Products/' . htmlspecialchars($row['ad_img']) . '" alt="Product Image">';
+                            }
+                            ?>
+                        </div>
+
+                        <div class="dash-cart-data">
+                            <p class="dash-address">Street Address : <?php echo htmlspecialchars($row['ad_address']); ?></p>
+                            <p class="dash-sub-heading">City : <?php echo htmlspecialchars($row['ad_city']); ?></p>
+                            <p class="dash-sub-heading">Zip Code : <?php echo htmlspecialchars($row['ad_zipcode']); ?></p>
+                            <p class="dash-sub-heading">Price : $<?php echo htmlspecialchars($row['ad_price']); ?></p>
+                            <p class="dash-sub-heading">Number of Bedrooms : <?php echo htmlspecialchars($row['ad_bedroom']); ?></p>
+                            <p class="dash-sub-heading">Number of Bathrooms : <?php echo htmlspecialchars($row['ad_bathroom']); ?></p>
+                            <p class="dash-sub-heading">Built Year : <?php echo htmlspecialchars($row['ad_year']); ?></p>
+                            <p class="dash-sub-heading">Size : <?php echo htmlspecialchars($row['ad_size']); ?> Sq Ft.</p>
+                            <p class="dash-sub-heading">Buyer's Agent Compensation: $<?php echo htmlspecialchars($row['ad_commission']); ?></p>
+                            <p class="dash-sub-heading">Seller's Agent Name : <?php echo htmlspecialchars($row['ad_agent_name']); ?></p>
+                            <p class="dash-sub-heading">Seller's Agent Phone : <?php echo htmlspecialchars($row['ad_agent_phone']); ?></p>
+                        </div>
+                    </div>
+                </div>
+        <?php
             }
+        } else {
+            echo "<h4>No Products</h4>";
+        }
+
+        mysqli_close($conn);
         ?>
-        <!-- Product Cart HTML End -->
     </div>
     <!-- Products Uploaded with PHP end -->
 
@@ -121,5 +126,6 @@
             });
         });
     </script>
+
 </body>
 </html>

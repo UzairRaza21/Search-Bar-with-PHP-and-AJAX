@@ -86,8 +86,6 @@ nav {
     background-color: #085080;
 }
 
-
-
 .product-form{
     display: flex;
     flex-direction: column;
@@ -175,6 +173,7 @@ nav {
 .ads-flex-container{
     margin: 10px 20%;
     max-width: 80%;
+    display: flex;
 }
 .flex-item{
     display: flex;
@@ -252,6 +251,9 @@ nav {
     font-size: 18px;
     font-family: "Poppins";
 }
+
+
+
 @media screen and (max-width: 1440px) {
 .ads-hero-section{
     font-size: 50px;
@@ -330,8 +332,9 @@ nav {
     margin: 10px 10%;
     width: 90%;
 }
-.flex-item {
+.flex-item{
     margin: 18px 3px;
+    display: flex !important;
 }
 .dash-cart-data{
     padding-inline: 25px;

@@ -15,19 +15,48 @@ if(isset($_POST['upload_ad'])){
     $pagent_phone = $_POST['property_agent_phone'];
     $pyear = $_POST['property_year'];
 
-    // image upload code start
-    $pimage_name = $_FILES['property_image']['name'];
-    $pimage_temp_name = $_FILES['property_image']['tmp_name'];
-    move_uploaded_file($pimage_temp_name,  "uploaded-Products/" . $pimage_name ); 
-    // image upload code end
+    // Initialize an array to hold the image file names
+    $pimage_names = [];
 
-    $sql = "INSERT INTO `ads`(`ad_address`, `ad_price`, `ad_size`, `ad_year`, `ad_commission`, `ad_img`, `ad_city`, `ad_zipcode`, `ad_bedroom`, `ad_bathroom`, `ad_agent_name`, `ad_agent_phone`) VALUES ('{$paddress}','{$pprice}','{$psize}','{$pyear}','{$pcommission}','{$pimage_name}','{$pcity}','{$pzipcode}','{$pbedroom}','{$pbathroom}','{$pagent_name}','{$pagent_phone}')";
+    // Loop through each uploaded file
+    foreach ($_FILES['property_image']['tmp_name'] as $key => $tmp_name) {
+        $pimage_name = $_FILES['property_image']['name'][$key];
+        $pimage_temp_name = $tmp_name;
 
-    $result = mysqli_query($conn, $sql) or die ("Query not Successfull");
+        // Validate and move the uploaded files
+        if (is_uploaded_file($pimage_temp_name)) {
+            $upload_dir = "uploaded-Products/";
+            $pimage_path = $upload_dir . basename($pimage_name);
+
+            // Check file type and size (optional)
+            $allowed_types = ['image/jpeg', 'image/png', 'image/gif'];
+            $max_size = 2 * 1024 * 1024; // 2 MB
+
+            if (in_array($_FILES['property_image']['type'][$key], $allowed_types) && $_FILES['property_image']['size'][$key] <= $max_size) {
+                if (move_uploaded_file($pimage_temp_name, $pimage_path)) {
+                    // Add the file name to the array
+                    $pimage_names[] = $pimage_name;
+                } else {
+                    die("Image upload failed for $pimage_name");
+                }
+            } else {
+                die("Invalid image file for $pimage_name");
+            }
+        } else {
+            die("No image file uploaded for $pimage_name");
+        }
+    }
+
+    // Convert the array of image names to a JSON string
+    $pimage_names_json = json_encode($pimage_names);
+
+    $sql = "INSERT INTO `ads`(`ad_address`, `ad_price`, `ad_size`, `ad_year`, `ad_commission`, `ad_img`, `ad_city`, `ad_zipcode`, `ad_bedroom`, `ad_bathroom`, `ad_agent_name`, `ad_agent_phone`) 
+            VALUES ('{$paddress}', '{$pprice}', '{$psize}', '{$pyear}', '{$pcommission}', '{$pimage_names_json}', '{$pcity}', '{$pzipcode}', '{$pbedroom}', '{$pbathroom}', '{$pagent_name}', '{$pagent_phone}')";
+
+    $result = mysqli_query($conn, $sql) or die ("Query not successful: " . mysqli_error($conn));
    
     mysqli_close($conn);
     header("location: products.php");
-
+    exit();
 }
-
 ?>
