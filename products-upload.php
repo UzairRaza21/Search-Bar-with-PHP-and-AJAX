@@ -17,7 +17,7 @@ if (!isset($_SESSION['admin_name'])){
     <!-- Nav Start -->
     <nav>
         <div id="logo-pic">
-            <img src="lmages/dash-logo.jpg" alt="threads" width="180" height="60">
+            <img src="lmages/dash-logo-removebg.png" alt="threads" width="180" height="60">
         </div>
         
         <div>
@@ -50,56 +50,72 @@ if (!isset($_SESSION['admin_name'])){
         <h1>Upload Ads</h1>
         <form action="product-insert.php" method="post" enctype="multipart/form-data" >
 
-            <label for="property_address">Street Address
-                <input type="text" name="property_address" id="property-address" style="margin-left: 30px; width: 250px;height: 25px;border-radius: 5px">
-            </label><br><br>
+            <div class="product-form-field">
+                <label for="property_address">Street Address</label>
+                <input type="text" name="property_address" id="property-address" style="margin-left: 10px; width: 250px;height: 25px;border-radius: 5px">
+            </div>
+            <br>
 
-            <label for="property-city">City
-                <input type="text" name="property_city" id="property-city" style="margin-left: 20px;width:250px;height: 25px;border-radius: 5px">
-            </label><br><br>
+            <div class="product-form-field">
+            <label for="property-city">City</label>
+            <input type="text" name="property_city" id="property-city" style="margin-left: 10px;width:250px;height: 25px;border-radius: 5px">
+            </div>
+            <br>
 
-            <label for="property-zipcode">Zip Code
-                <input type="text" name="property_zipcode" id="property-zipcode" style="margin-left: 20px;width:250px;height: 25px;border-radius: 5px">
-            </label><br><br>
+            <div class="product-form-field">
+            <label for="property-zipcode">Zip Code</label>
+            <input type="text" name="property_zipcode" id="property-zipcode" style="margin-left: 10px;width:250px;height: 25px;border-radius: 5px">
+            </div>
+            <br>
 
-            <label for="property_price">Property Price
-                <input type="text" name="property_price" id="property-price" style="margin-left: 53px;width:250px;height: 25px;border-radius: 5px">
-            </label><br><br>
+            <div class="product-form-field">
+            <label for="property_price">Property Price</label>
+            <input type="text" name="property_price" id="property-price" style="margin-left: 10px;width:250px;height: 25px;border-radius: 5px">
+            </div>
+            <br>
 
-            <label for="property-bedrooms">Number of Bedrooms
-                <input type="text" name="property_bedrooms" id="property-bedrooms" style="margin-left: 20px;width:250px;height: 25px;border-radius: 5px">
-            </label><br><br>
+            <div class="product-form-field">
+            <label for="property-bedrooms">Number of Bedrooms</label>
+            <input type="text" name="property_bedrooms" id="property-bedrooms" style="margin-left: 10px;width:250px;height: 25px;border-radius: 5px">
+            </div>
+            <br>
 
-            <label for="property-bathrooms">Number of Bathrooms
-                <input type="text" name="property_bathrooms" id="property-bathrooms" style="margin-left: 20px;width:250px;height: 25px;border-radius: 5px">
-            </label><br><br>
+            <div class="product-form-field">
+            <label for="property-bathrooms">Number of Bathrooms</label>
+            <input type="text" name="property_bathrooms" id="property-bathrooms" style="margin-left: 10px;width:250px;height: 25px;border-radius: 5px">
+            </div><br>
 
-            <label for="property_size">Property Size
-                <input type="text" name="property_size" id="property-size" style="margin-left: 60px;width:250px;height: 25px;border-radius: 5px">
-            </label><br><br>
+            <div class="product-form-field">
+            <label for="property_size">Property Size</label>
+            <input type="text" name="property_size" id="property-size" style="margin-left: 10px;width:250px;height: 25px;border-radius: 5px">
+            </div><br>
 
-            <label for="property-commission">Agent Compensation
-                <input type="text" name="property_commission" id="property-commission" style="margin-left: 20px;width:250px;height: 25px;border-radius: 5px">
-            </label><br><br>
+            <div class="product-form-field">
+            <label for="property-commission">Agent Compensation</label>
+            <input type="text" name="property_commission" id="property-commission" style="margin-left: 10px;width:250px;height: 25px;border-radius: 5px">
+            </div><br>
 
-            <label for="property-agent-name">Seller's Agent Name
-                <input type="text" name="property_agent_name" id="property-agent_name" style="margin-left: 20px;width:250px;height: 25px;border-radius: 5px">
-            </label><br><br>
+            <div class="product-form-field">
+            <label for="property-agent-name">Seller's Agent Name</label>
+            <input type="text" name="property_agent_name" id="property-agent_name" style="margin-left: 10px;width:250px;height: 25px;border-radius: 5px">
+            </div><br>
 
-            <label for="property-agent-phone">Seller's Agent Phone Number
-                <input type="text" name="property_agent_phone" id="property-agent-phone" style="margin-left: 20px;width:250px;height: 25px;border-radius: 5px">
-            </label><br><br>
+            <div class="product-form-field">
+            <label for="property-agent-phone">Seller's Agent Phone</label>
+            <input type="text" name="property_agent_phone" id="property-agent-phone" style="margin-left: 10px;width:250px;height: 25px;border-radius: 5px">
+            </div><br>
 
+            <div class="product-form-field">
+            <label for="property-year">Built Year</label>
+            <input type="text" name="property_year" id="property-year" style="margin-left: 85px;width:250px;height: 25px;border-radius: 5px">
+            </div><br>
 
-            <label for="property-year">Built Year
-                <input type="text" name="property_year" id="property-year" style="margin-left: 85px;width:250px;height: 25px;border-radius: 5px">
-            </label><br><br>
+            <div class="product-form-field">
+            <label for="">Property Image</label>
+            <input type="file" name="property_image" style="margin-left: 10px;"> 
+            </div><br>
 
-            <label for="">Property Image
-                <input type="file" name="property_image" style="margin-left: 45px;"> <br><br>
-            </label><br><br>
-
-            <input type="submit" value="Upload" name="upload_ad" class="product-upload-button"  style="margin-left: 180px;">
+            <input type="submit" value="Upload" name="upload_ad" class="product-upload-button"  style="margin-left: 250px;">
         </form>
         <br>
         <br>

@@ -69,7 +69,7 @@ if (isset($_POST['update_ad'])) {
     <!-- Nav Start -->
     <nav>
         <div id="logo-pic">
-            <img src="lmages/dash-logo.jpg" alt="threads" width="180" height="60">    
+            <img src="lmages/dash-logo-removebg.png" alt="threads" width="180" height="60">    
         </div>
         
         <div>
@@ -108,63 +108,72 @@ if (isset($_POST['update_ad'])) {
         <h1>Upload Products</h1>
         <form action="" method="post" enctype="multipart/form-data" >
 
-            <label for="property_address">Street Address
-                <input type="text" name="property_address" id="property-address" value= "<?php echo  $property['ad_address'] ?>" style="margin-left: 60px; width: 200px">
-            </label><br><br>
+            <div class="product-form-field">
+            <label for="property_address">Street Address</label>
+            <input type="text" name="property_address" id="property-address" value= "<?php echo  $property['ad_address'] ?>" style="margin-left: 60px; width: 200px">
+            </div><br>
 
-            <label for="property-city">City
-                <input type="text" name="property_city" id="property-city" value= "<?php echo  $property['ad_city'] ?>" style="margin-left: 10px;width:200px">
-            </label><br><br>  
+            <div class="product-form-field">
+            <label for="property-city">City</label>
+            <input type="text" name="property_city" id="property-city" value= "<?php echo  $property['ad_city'] ?>" style="margin-left: 10px;width:200px">
+            </div><br>  
 
-            <label for="property-zipcode">Zip Code
-                <input type="text" name="property_zipcode" id="property-zipcode" value= "<?php echo  $property['ad_zipcode'] ?>" style="margin-left: 10px;width:200px">
-            </label><br><br>
+            <div class="product-form-field">
+            <label for="property-zipcode">Zip Code</label>
+            <input type="text" name="property_zipcode" id="property-zipcode" value= "<?php echo  $property['ad_zipcode'] ?>" style="margin-left: 10px;width:200px">
+            </div><br>
 
-            <label for="property_price">Property Price
-                <input type="text" name="property_price" id="property-price" value= "<?php echo  $property['ad_price'] ?>" style="margin-left: 10px;width:200px">
-            </label><br><br>            
+            <div class="product-form-field">
+            <label for="property_price">Property Price</label>
+            <input type="text" name="property_price" id="property-price" value= "<?php echo  $property['ad_price'] ?>" style="margin-left: 10px;width:200px">
+            </div><br>            
             
+            <div class="product-form-field">
+            <label for="property-bedrooms">Number of Bedrooms</label>
+            <input type="text" name="property_bedrooms" id="property-bedrooms" value= "<?php echo  $property['ad_bedroom'] ?>" style="margin-left: 10px;width:200px">
+            </div><br>
+
+            <div class="product-form-field">
+            <label for="property-bathrooms">Number of Bathrooms</label>
+            <input type="text" name="property_bathrooms" id="property-bathrooms" value= "<?php echo  $property['ad_bathroom'] ?>" style="margin-left: 10px;width:200px">
+            </div><br>
+
+            <div class="product-form-field">
+            <label for="property_size">Property Size</label>
+            <input type="text" name="property_size" id="property-size" value= "<?php echo  $property['ad_size'] ?>" style="margin-left: 10px;width:200px">
+            </div><br>
+
+            <div class="product-form-field">
+            <label for="property-commission">Agent Compensation</label>
+            <input type="text" name="property_commission" id="property-commission" value= "<?php echo  $property['ad_commission'] ?>" style="margin-left: 10px;width:200px">
+            </div><br>
             
-            <label for="property-bedrooms">Number of Bedrooms
-                <input type="text" name="property_bedrooms" id="property-bedrooms" value= "<?php echo  $property['ad_bedroom'] ?>" style="margin-left: 10px;width:200px">
-            </label><br><br>
+            <div class="product-form-field">
+            <label for="property-agent-name">Seller's Agent Name</label>
+            <input type="text" name="property_agent_name" id="property-agent_name" value= "<?php echo  $property['ad_agent_name'] ?>" style="margin-left: 10px;width:200px;">
+            </div><br>
 
-            <label for="property-bathrooms">Number of Bathrooms
-                <input type="text" name="property_bathrooms" id="property-bathrooms" value= "<?php echo  $property['ad_bathroom'] ?>" style="margin-left: 10px;width:200px">
-            </label><br><br>
+            <div class="product-form-field">
+            <label for="property-agent-phone">Seller's Agent Phone Number</label>
+            <input type="text" name="property_agent_phone" id="property-agent-phone" value= "<?php echo  $property['ad_agent_phone'] ?>"  style="margin-left: 20px;width:200px;">
+            </div><br>
 
-            <label for="property_size">Property Size
-                <input type="text" name="property_size" id="property-size" value= "<?php echo  $property['ad_size'] ?>" style="margin-left: 10px;width:200px">
-            </label><br><br>
+            <div class="product-form-field">
+            <label for="property-year">Built Year</label>
+            <input type="text" name="property_year" id="property-year" value= "<?php echo  $property['ad_year'] ?>" style="margin-left: 10px;width:200px">
+            </div><br>
 
-            <label for="property-commission">Agent Compensation
-                <input type="text" name="property_commission" id="property-commission" value= "<?php echo  $property['ad_commission'] ?>" style="margin-left: 10px;width:200px">
-            </label><br><br>
-
-            <label for="property-agent-name">Seller's Agent Name
-                <input type="text" name="property_agent_name" id="property-agent_name" value= "<?php echo  $property['ad_agent_name'] ?>" style="margin-left: 20px;width:250px;height: 25px;border-radius: 5px">
-            </label><br><br>
-
-            <label for="property-agent-phone">Seller's Agent Phone Number
-                <input type="text" name="property_agent_phone" id="property-agent-phone" value= "<?php echo  $property['ad_agent_phone'] ?>"  style="margin-left: 20px;width:250px;height: 25px;border-radius: 5px">
-            </label><br><br>
-
-
-
-            <label for="property-year">Built Year
-                <input type="text" name="property_year" id="property-year" value= "<?php echo  $property['ad_year'] ?>" style="margin-left: 10px;width:200px">
-            </label><br><br>
-
-            <label for="">Property Image
-                <input type="file" name="property_image" style="margin-left: 45px" value= "<?php echo  $property['ad_img'] ?>" > <br><br>
-            </label><br><br>
+            <div class="product-form-field">
+            <label for="">Property Image</label>
+            <input type="file" name="property_image" style="margin-left: 80px;" value= "<?php echo  $property['ad_img'] ?>" > <br><br>
+            </div><br>
 
             <?php if (!empty($property['ad_img'])): ?>
                 <img src="uploaded-Products/<?php echo htmlspecialchars($property['ad_img']); ?>" alt="Current Property Image" style="max-width: 200px;"><br><br>
             <?php endif; ?>
     <br><br>
 
-            <input type="submit" value="Update" name="update_ad" class="product-upload-button"  style="margin-left: 120px;">
+            <input type="submit" value="Update" name="update_ad" class="product-upload-button"  style="margin-left: 300px;">
         </form>
         <br>
         <br>

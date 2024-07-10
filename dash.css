@@ -185,6 +185,11 @@ nav {
     flex-wrap: nowrap;
 }
 
+.product-form-field{
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+}
 .dash-cart-img{
     flex-basis: 60%;
 }
