@@ -21,7 +21,7 @@ if (!isset($_SESSION['admin_name'])){
 <!-- Nav Start -->
 <nav>
     <div id="logo-pic">
-        <img src="images/dash-logo-removebg.png" alt="threads" width="180" height="60">
+        <img src="lmages/dash-logo-removebg.png" alt="threads" width="180" height="60">
     </div>
     
     <div>
