@@ -15,11 +15,17 @@ if(mysqli_num_rows($result) > 0){
                     <div class="dash-cart-img"><img src="uploaded-Products/' . $row["ad_img"] . '" alt="Ad Image"></div>
 
                     <div class="dash-cart-data">
-                    <p class="dash-address">' . $row["ad_address"] . '</p>
-                    <p class="dash-commission">Agent Commission: ' . $row["ad_commission"] . '</p>
-                    <p class="dash-year">Built Year: ' . $row["ad_year"] . '</p>
-                    <p class="dash-price">Price: ' . $row["ad_price"] . '</p>
-                    <p class="dash-area">Build: ' . $row["ad_size"] . ' yards</p>
+                    <p class="dash-address">Street Address : ' . $row["ad_address"] . '</p>
+                    <p class="dash-sub-heading">City :' . $row["ad_city"] . '</p>
+                    <p class="dash-sub-heading">Zip Code : ' . $row["ad_zipcode"] . '</p>
+                    <p class="dash-sub-heading">Price : ' . $row["ad_price"] . '</p>
+                    <p class="dash-sub-heading">Number of Bedrooms : ' . $row["ad_bedroom"] . '</p>
+                    <p class="dash-sub-heading">Number of Bathrooms : ' . $row["ad_bathroom"] . '</p>
+                    <p class="dash-sub-heading">Built Year : ' . $row["ad_year"] . '</p>
+                    <p class="dash-sub-heading">Build : ' . $row["ad_size"] . ' Sq. Ft</p>
+                    <p class="dash-sub-heading">Agent Commission : ' . $row["ad_commission"] . '</p>
+                    <p class="dash-sub-heading">Seller Agent name : ' . $row["ad_agent_name"] . '</p>
+                    <p class="dash-sub-heading">Seller Agent Phone : ' . $row["ad_agent_phone"] . '</p>
                     </div>
 
                 </div>';

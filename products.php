@@ -48,7 +48,7 @@
 <!-- Live Search HTML Code Start -->
 <div class="ads-search-bar" >
     <label for="Search">Search :</label>
-    <input type="text" id="search" autocomplete="off">
+    <input type="text" id="search" autocomplete="off" placeholder="Search Property here">
 </div>
 
 
@@ -82,11 +82,17 @@
                     <div class="dash-cart-img"><?php echo "<img src='uploaded-Products/".$row['ad_img']."' >"  ?></div>
 
                     <div class="dash-cart-data">
-                    <p class="dash-address"><?php echo $row['ad_address']?></p>
-                    <p class="dash-commission">Agent Commission: $<?php echo $row['ad_commission']?></p>
-                    <p class="dash-year">Built Year :  <?php echo $row['ad_year']?></p>
-                    <p class="dash-price">Price : $<?php echo $row['ad_price']?></p>
-                    <p class="dash-area">Build : <?php echo $row['ad_size']?> yards</p>
+                    <p class="dash-address">Street Address : <?php echo $row['ad_address']?></p>
+                    <p class="dash-sub-heading">City :  <?php echo $row['ad_city']?></p>
+                    <p class="dash-sub-heading">Zip Code :  <?php echo $row['ad_zipcode']?></p>
+                    <p class="dash-sub-heading">Price : $<?php echo $row['ad_price']?></p>
+                    <p class="dash-sub-heading">Number of Bedrooms :  <?php echo $row['ad_bedroom']?></p>
+                    <p class="dash-sub-heading">Number of Bathrooms :  <?php echo $row['ad_bathroom']?></p>
+                    <p class="dash-sub-heading">Built Year :  <?php echo $row['ad_year']?></p>
+                    <p class="dash-sub-heading">Size : <?php echo $row['ad_size']?> Sq Ft.</p>
+                    <p class="dash-sub-heading">Buyer's Agent Compensation: $<?php echo $row['ad_commission']?></p>
+                    <p class="dash-sub-heading">Seller's Agent Name :  <?php echo $row['ad_agent_name']?></p>
+                    <p class="dash-sub-heading">Seller's Agent Phone :  <?php echo $row['ad_agent_phone']?></p>
                     </div>
 
                     <!-- Cart display Product End -->

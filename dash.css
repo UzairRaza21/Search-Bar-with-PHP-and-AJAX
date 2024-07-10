@@ -218,39 +218,34 @@ nav {
     padding-block: 10px;
 }
 .dash-address{
-    font-size: 26px;
+    font-size: 24px;
     color: #222;
     font-weight: 500;
     font-family: "Poppins", sans-serif;
 }
-.dash-area{
+.dash-sub-heading{
     color:#5c727d;
-    font-size: 20px;
+    font-size: 18px;
     font-family: "Poppins", sans-serif;
-    line-height: 20px;
-}
-.dash-price{
-    color:#5c727d;
-    font-size: 20px;
-    line-height: 20px;
-    font-family: "Poppins", sans-serif;
-}
-.dash-year{
-    color:#5c727d;
-    font-size: 20px;
-    line-height: 20px;
-    font-family: "Poppins", sans-serif;
-}
-.dash-commission{
-    color:#5c727d;
-    font-size: 20px;
-    line-height: 20px;
-    font-family: "Poppins", sans-serif;
+    line-height: 18px;
 }
 
 .ads-search-bar{
     display: flex;
     justify-content: center;
+    margin-block: 20px;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+}
+
+.ads-search-bar input{
+    width: 280px;
+    height: 30px;
+    padding-left: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: "Poppins";
 }
 @media screen and (max-width: 1440px) {
 .ads-hero-section{
@@ -275,22 +270,11 @@ nav {
     font-size: 22px;
     line-height: 22px;
 }
-.dash-area{
+.dash-sub-heading{
     font-size: 18px;
     line-height: 18px;
 }
-.dash-price{
-    font-size: 18px;
-    line-height: 18px;
-}
-.dash-year{
-    font-size: 18px;
-    line-height: 18px;
-}
-.dash-commission{
-    font-size: 18px;
-    line-height: 18px;
-}
+
 }
 
 @media screen and (max-width: 1024px) {
@@ -316,19 +300,7 @@ nav {
     font-size: 20px;
     line-height: 20px;
 }
-.dash-area{
-    font-size: 16px;
-    line-height: 16px;
-}
-.dash-price{
-    font-size: 16px;
-    line-height: 16px;
-}
-.dash-year{
-    font-size: 16px;
-    line-height: 16px;
-}
-.dash-commission{
+.dash-sub-heading{
     font-size: 16px;
     line-height: 16px;
 }
@@ -365,19 +337,7 @@ nav {
     font-size: 20px;
     line-height: 20px;
 }
-.dash-area{
-    font-size: 16px;
-    line-height: 16px;
-}
-.dash-price{
-    font-size: 16px;
-    line-height: 16px;
-}
-.dash-year{
-    font-size: 16px;
-    line-height: 16px;
-}
-.dash-commission{
+.dash-sub-heading{
     font-size: 16px;
     line-height: 16px;
 }
@@ -415,19 +375,7 @@ nav {
         font-size: 18px;
         line-height: 18px;
     }
-    .dash-area{
-        font-size: 14px;
-        line-height: 14px;
-    }
-    .dash-price{
-        font-size: 14px;
-        line-height: 14px;
-    }
-    .dash-year{
-        font-size: 14px;
-        line-height: 14px;
-    }
-    .dash-commission{
+    .dash-sub-heading{
         font-size: 14px;
         line-height: 14px;
     }
@@ -473,23 +421,10 @@ nav {
         font-size: 18px;
         line-height: 18px;
     }
-    .dash-area{
+    .dash-sub-heading{
         font-size: 14px;
         line-height: 14px;
     }
-    .dash-price{
-        font-size: 14px;
-        line-height: 14px;
-    }
-    .dash-year{
-        font-size: 14px;
-        line-height: 14px;
-    }
-    .dash-commission{
-        font-size: 14px;
-        line-height: 14px;
-    }
-
     .dashboard-total-ads {
         width: 75%;
         height: 400px;
@@ -521,25 +456,13 @@ nav {
             padding-block: 0px;
             padding-bottom: 15px;
         }
+        .dash-sub-heading{
+            font-size: 18px;
+            line-height: 18px;
+        }
         .dash-address{
             font-size: 16px;
             line-height: 16px;
-        }
-        .dash-area{
-            font-size: 13px;
-            line-height: 13px;
-        }
-        .dash-price{
-            font-size: 13px;
-            line-height: 13px;
-        }
-        .dash-year{
-            font-size: 13px;
-            line-height: 13px;
-        }
-        .dash-commission{
-            font-size: 13px;
-            line-height: 13px;
         }
         .dashboard-total-ads {
             width: 85%;

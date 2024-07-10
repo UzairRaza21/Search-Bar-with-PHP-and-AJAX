@@ -50,24 +50,49 @@ if (!isset($_SESSION['admin_name'])){
         <h1>Upload Ads</h1>
         <form action="product-insert.php" method="post" enctype="multipart/form-data" >
 
-            <label for="property_address">Property Address
+            <label for="property_address">Street Address
                 <input type="text" name="property_address" id="property-address" style="margin-left: 30px; width: 250px;height: 25px;border-radius: 5px">
             </label><br><br>
 
-            <label for="property_size">Property Size
-                <input type="text" name="property_size" id="property-size" style="margin-left: 60px;width:250px;height: 25px;border-radius: 5px">
+            <label for="property-city">City
+                <input type="text" name="property_city" id="property-city" style="margin-left: 20px;width:250px;height: 25px;border-radius: 5px">
+            </label><br><br>
+
+            <label for="property-zipcode">Zip Code
+                <input type="text" name="property_zipcode" id="property-zipcode" style="margin-left: 20px;width:250px;height: 25px;border-radius: 5px">
             </label><br><br>
 
             <label for="property_price">Property Price
                 <input type="text" name="property_price" id="property-price" style="margin-left: 53px;width:250px;height: 25px;border-radius: 5px">
             </label><br><br>
 
-            <label for="property-year">Built Year
-                <input type="text" name="property_year" id="property-year" style="margin-left: 85px;width:250px;height: 25px;border-radius: 5px">
+            <label for="property-bedrooms">Number of Bedrooms
+                <input type="text" name="property_bedrooms" id="property-bedrooms" style="margin-left: 20px;width:250px;height: 25px;border-radius: 5px">
             </label><br><br>
 
-            <label for="property-commission">Agent Commission
+            <label for="property-bathrooms">Number of Bathrooms
+                <input type="text" name="property_bathrooms" id="property-bathrooms" style="margin-left: 20px;width:250px;height: 25px;border-radius: 5px">
+            </label><br><br>
+
+            <label for="property_size">Property Size
+                <input type="text" name="property_size" id="property-size" style="margin-left: 60px;width:250px;height: 25px;border-radius: 5px">
+            </label><br><br>
+
+            <label for="property-commission">Agent Compensation
                 <input type="text" name="property_commission" id="property-commission" style="margin-left: 20px;width:250px;height: 25px;border-radius: 5px">
+            </label><br><br>
+
+            <label for="property-agent-name">Seller's Agent Name
+                <input type="text" name="property_agent_name" id="property-agent_name" style="margin-left: 20px;width:250px;height: 25px;border-radius: 5px">
+            </label><br><br>
+
+            <label for="property-agent-phone">Seller's Agent Phone Number
+                <input type="text" name="property_agent_phone" id="property-agent-phone" style="margin-left: 20px;width:250px;height: 25px;border-radius: 5px">
+            </label><br><br>
+
+
+            <label for="property-year">Built Year
+                <input type="text" name="property_year" id="property-year" style="margin-left: 85px;width:250px;height: 25px;border-radius: 5px">
             </label><br><br>
 
             <label for="">Property Image

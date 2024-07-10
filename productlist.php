@@ -66,11 +66,17 @@ if (!isset($_SESSION['admin_name'])){
             <thead>
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Property Address</th>
+                    <th scope="col">Street Address</th>
+                    <th scope="col">City</th>
+                    <th scope="col">Zip Code</th>
                     <th scope="col">Price</th>
-                    <th scope="col">Property Size</th>
+                    <th scope="col">No. of Bedrooms</th>
+                    <th scope="col">No. of Bathrooms</th>
+                    <th scope="col">Size</th>
+                    <th scope="col">Agent Compensation</th>
+                    <th scope="col">Agent's Name</th>
+                    <th scope="col">Agent's Phone</th>
                     <th scope="col">Built Year</th>
-                    <th scope="col">Agent Commission</th>
                     <th scope="col">Property Images</th>
                     <th scope="col">Action</th>
                 </tr>
@@ -85,10 +91,16 @@ if (!isset($_SESSION['admin_name'])){
             <tr>
                 <th scope="row"><?php echo $row['ad_id']?></th>
                 <td><?php echo $row['ad_address']?></td>
+                <td><?php echo $row['ad_city']?></td>
+                <td><?php echo $row['ad_zipcode']?></td>
                 <td><?php echo $row['ad_price']?></td>
+                <td><?php echo $row['ad_bedroom'] ?></td>
+                <td><?php echo $row['ad_bathroom']?></td>
                 <td><?php echo $row['ad_size']?></td>
+                <td><?php echo $row['ad_commission']?></td>
+                <td><?php echo $row['ad_agent_name']?></td>
+                <td><?php echo $row['ad_agent_phone'] ?></td>
                 <td><?php echo $row['ad_year']?></td>
-                <td><?php echo $row['ad_commission'] ?></td>
                 <td><?php echo "<img style='width: 150px; height: 80px; border-radius:5px;' src='uploaded-Products/".$row['ad_img']."' >" ?></td>
                 <td>
                     <!-- Edit button -->

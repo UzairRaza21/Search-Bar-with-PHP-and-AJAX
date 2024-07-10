@@ -16,16 +16,22 @@ $result = mysqli_query($conn, $sql) or die('Failed to fetch data');
 $row = mysqli_num_rows($result);
 if ($row > 0) {
   $property = mysqli_fetch_assoc($result);
-
+ 
  
 
 if (isset($_POST['update_ad'])) {
   include("conn.php");
   $paddress = $_POST['property_address'];
-  $psize = $_POST['property_size'];
+  $pcity = $_POST['property_city'];
+  $pzipcode = $_POST['property_zipcode'];
   $pprice = $_POST['property_price'];
-  $pyear = $_POST['property_year'];
+  $pbedroom = $_POST['property_bedrooms'];
+  $pbathroom = $_POST['property_bathrooms'];
+  $psize = $_POST['property_size'];
   $pcommission = $_POST['property_commission'];
+  $pagent_name = $_POST['property_agent_name'];
+  $pagent_phone = $_POST['property_agent_phone'];
+  $pyear = $_POST['property_year'];
 
   // image upload code start
   $pimage_name = $_FILES['property_image']['name'];
@@ -36,11 +42,11 @@ if (isset($_POST['update_ad'])) {
 } else {
     $pimage_name = $property['ad_img']; // Use existing image if no new image is uploaded
 }
-//   move_uploaded_file($pimage_temp_name,  "uploaded-Products/" . $pimage_name ); 
+
   // image upload code end
 
-  $sql = "UPDATE `ads` SET `ad_address`='$paddress',`ad_price`='$pprice',`ad_size`='$psize',`ad_year`='$pyear',`ad_commission`='$pcommission',`ad_img`='$pimage_name' WHERE  ad_id = $adid";
   
+  $sql = "UPDATE `ads` SET `ad_address`='$paddress',`ad_price`='$pprice',`ad_size`='$psize',`ad_year`='$pyear',`ad_commission`='$pcommission',`ad_img`='$pimage_name',`ad_city`='$pcity',`ad_zipcode`='$pzipcode',`ad_bedroom`='$pbedroom',`ad_bathroom`='$pbathroom',`ad_agent_name`='$pagent_name',`ad_agent_phone`='$pagent_phone' WHERE ad_id = $adid";
   $result = mysqli_query($conn, $sql) or die('Falied to fetch Record');
 
   mysqli_close($conn);
@@ -102,24 +108,51 @@ if (isset($_POST['update_ad'])) {
         <h1>Upload Products</h1>
         <form action="" method="post" enctype="multipart/form-data" >
 
-            <label for="property_address">Property Address
+            <label for="property_address">Street Address
                 <input type="text" name="property_address" id="property-address" value= "<?php echo  $property['ad_address'] ?>" style="margin-left: 60px; width: 200px">
+            </label><br><br>
+
+            <label for="property-city">City
+                <input type="text" name="property_city" id="property-city" value= "<?php echo  $property['ad_city'] ?>" style="margin-left: 10px;width:200px">
+            </label><br><br>  
+
+            <label for="property-zipcode">Zip Code
+                <input type="text" name="property_zipcode" id="property-zipcode" value= "<?php echo  $property['ad_zipcode'] ?>" style="margin-left: 10px;width:200px">
+            </label><br><br>
+
+            <label for="property_price">Property Price
+                <input type="text" name="property_price" id="property-price" value= "<?php echo  $property['ad_price'] ?>" style="margin-left: 10px;width:200px">
+            </label><br><br>            
+            
+            
+            <label for="property-bedrooms">Number of Bedrooms
+                <input type="text" name="property_bedrooms" id="property-bedrooms" value= "<?php echo  $property['ad_bedroom'] ?>" style="margin-left: 10px;width:200px">
+            </label><br><br>
+
+            <label for="property-bathrooms">Number of Bathrooms
+                <input type="text" name="property_bathrooms" id="property-bathrooms" value= "<?php echo  $property['ad_bathroom'] ?>" style="margin-left: 10px;width:200px">
             </label><br><br>
 
             <label for="property_size">Property Size
                 <input type="text" name="property_size" id="property-size" value= "<?php echo  $property['ad_size'] ?>" style="margin-left: 10px;width:200px">
             </label><br><br>
 
-            <label for="property_price">Property Price
-                <input type="text" name="property_price" id="property-price" value= "<?php echo  $property['ad_price'] ?>" style="margin-left: 10px;width:200px">
+            <label for="property-commission">Agent Compensation
+                <input type="text" name="property_commission" id="property-commission" value= "<?php echo  $property['ad_commission'] ?>" style="margin-left: 10px;width:200px">
             </label><br><br>
+
+            <label for="property-agent-name">Seller's Agent Name
+                <input type="text" name="property_agent_name" id="property-agent_name" value= "<?php echo  $property['ad_agent_name'] ?>" style="margin-left: 20px;width:250px;height: 25px;border-radius: 5px">
+            </label><br><br>
+
+            <label for="property-agent-phone">Seller's Agent Phone Number
+                <input type="text" name="property_agent_phone" id="property-agent-phone" value= "<?php echo  $property['ad_agent_phone'] ?>"  style="margin-left: 20px;width:250px;height: 25px;border-radius: 5px">
+            </label><br><br>
+
+
 
             <label for="property-year">Built Year
                 <input type="text" name="property_year" id="property-year" value= "<?php echo  $property['ad_year'] ?>" style="margin-left: 10px;width:200px">
-            </label><br><br>
-
-            <label for="property-commission">Agent Commission
-                <input type="text" name="property_commission" id="property-commission" value= "<?php echo  $property['ad_commission'] ?>" style="margin-left: 10px;width:200px">
             </label><br><br>
 
             <label for="">Property Image
