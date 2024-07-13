@@ -35,9 +35,7 @@ if (!isset($_SESSION['admin_name'])){
         </ul>
     </div>
 
-    <div id="menu" onclick="openMenu()">
-        <img src="images/hamburger.png" alt="menu" width="20">
-    </div>
+    <div id="menu" onclick="openMenu()">&#9776;</div>
 </nav>
 
 <div id="nav-col">

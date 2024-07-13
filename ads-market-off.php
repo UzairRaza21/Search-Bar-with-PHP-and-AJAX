@@ -26,9 +26,7 @@
             </ul>
         </div>
 
-        <div id="menu" onclick="openMenu()">
-            <img src="images/hamburger.png" alt="menu" width="20">
-        </div>
+        <div id="menu" onclick="openMenu()">&#9776;</div>
     </nav>
     
     <div id="nav-col">
@@ -98,7 +96,7 @@
                             <p class="dash-sub-heading"><img src="./lmages/icons8-measurement-24.png" width="20" alt="" srcset=""> <?php echo htmlspecialchars($row['ad_size']); ?> Sq Ft.</p>
                             <p class="dash-sub-heading"><strong>Price : $ </strong><?php echo htmlspecialchars($row['ad_price']); ?></p>
                             <p class="dash-sub-heading"><strong>Built Year : </strong><?php echo htmlspecialchars($row['ad_year']); ?></p>
-                            <p class="dash-sub-heading"><strong>Buyer's Agent Compensation: $</strong><?php echo htmlspecialchars($row['ad_commission']); ?></p>
+                            <p class="dash-agent-compensation"><strong>Buyer's Agent Compensation: $</strong><?php echo htmlspecialchars($row['ad_commission']); ?></p>
                             <p class="dash-sub-heading"><strong>Seller's Agent Name : </strong><?php echo htmlspecialchars($row['ad_agent_name']); ?></p>
                             <p class="dash-sub-heading"><strong>Seller's Agent Phone : </strong><?php echo htmlspecialchars($row['ad_agent_phone']); ?></p>
                         </div>

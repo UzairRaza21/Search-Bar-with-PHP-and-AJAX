@@ -48,7 +48,7 @@ if(mysqli_num_rows($result) > 0){
                     <p class="dash-sub-heading"><img src="./lmages/icons8-measurement-24.png" width="20" alt="" srcset=""> ' . htmlspecialchars($row["ad_size"]) . ' Sq. Ft</p>
                     <p class="dash-sub-heading"><strong>Price : $ </strong>' . htmlspecialchars($row["ad_price"]) . '</p>
                     <p class="dash-sub-heading"><strong>Built Year : </strong>' . htmlspecialchars($row["ad_year"]) . '</p>
-                    <p class="dash-sub-heading"><strong>Buyer&apos;s Agent Compensation: $</strong>' . htmlspecialchars($row["ad_commission"]) . '</p>
+                    <p class="dash-agent-compensation"><strong>Buyer&apos;s Agent Compensation: $</strong>' . htmlspecialchars($row["ad_commission"]) . '</p>
                     <p class="dash-sub-heading"><strong>Seller&apos;s Agent Name : </strong>' . htmlspecialchars($row["ad_agent_name"]) . '</p>
                     <p class="dash-sub-heading"><strong>Seller&apos;s Agent Phone : </strong>' . htmlspecialchars($row["ad_agent_phone"]) . '</p>
                 </div>

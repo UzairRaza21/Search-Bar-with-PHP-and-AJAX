@@ -237,6 +237,13 @@ nav {
     line-height: 12px;
     margin-block: 15px;
 }
+.dash-agent-compensation{
+    color:#5c727d;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    line-height: 12px;
+    margin-block: 15px;
+}
 strong{
     font-weight: 500;
 }
@@ -285,8 +292,13 @@ strong{
     margin-block: 10px;
 }
 .dash-sub-heading{
-    font-size: 16px;
-    line-height: 16px;
+    font-size: 14px;
+    line-height: 14px;
+    margin-block: 10px;
+}
+.dash-agent-compensation{
+    font-size: 13.5px;
+    line-height: 12px;
     margin-block: 10px;
 }
 
@@ -294,72 +306,79 @@ strong{
 
 @media screen and (max-width: 1024px) {
 .ads-hero-section{
-    font-size: 45px;
+    font-size: 35px;
 }
 .dash-cart{
-    gap: 15px;
-    width: 300px ;
+    width: 350px ;
     height: auto;
 }
     
-/* .ads-flex-container{
-    margin: 10px 20%;
-    width: 90%;
-} */
+.ads-flex-container{
+    max-width: 74% !important;
+}
 .dash-cart-data{
-    padding-inline: 25px;
-    padding-block: 0px;
-    padding-bottom: 10px;
+    padding-inline: 35px;
+    padding-block: 20px;
 }
 .dash-address{
     font-size: 20px;
-    line-height: 20px;
+    line-height: 30px;
+    margin-block: 10px;
 }
 .dash-sub-heading{
-    font-size: 16px;
-    line-height: 16px;
+    font-size: 14px;
+    line-height: 14px;
+    margin-block: 10px;
 }
-.dashboard-total-ads {
-    width: 35%;
+.dash-agent-compensation{
+    font-size: 13.5px;
+    line-height: 12px;
+    margin-block: 10px;
 }
+
 }
 
 
 @media screen and (max-width: 768px){
-.ads-hero-section{
-    font-size: 40px;
-    height: 75vh;
-}
-.dash-cart{
-    gap: 15px;
-    width: 300px ;
-    height: auto;
-}
-    
-/* .ads-flex-container{
-    margin: 10px 10%;
-    width: 90%;
-} */
 .flex-item{
     margin: 18px 3px;
     display: flex !important;
 }
-.dash-cart-data{
-    padding-inline: 25px;
-    padding-block: 0px;
-    padding-bottom: 10px;
-}
-.dash-address{
-    font-size: 20px;
-    line-height: 20px;
-}
-.dash-sub-heading{
-    font-size: 16px;
-    line-height: 16px;
-}
 .dashboard-total-ads {
     width: 50%;
 }
+.ads-hero-section{
+    font-size: 35px;
+}
+.dash-cart{
+    width: 320px ;
+    height: auto;
+}
+    
+.ads-flex-container{
+    max-width: 88% !important;
+    gap: 10px;
+}
+.dash-cart-data{
+    padding-inline: 35px;
+    padding-block: 20px;
+}
+.dash-address{
+    font-size: 20px;
+    line-height: 30px;
+    margin-block: 10px;
+}
+.dash-sub-heading{
+    font-size: 14px;
+    line-height: 14px;
+    margin-block: 10px;
+}
+.dash-agent-compensation{
+    font-size: 13.5px;
+    line-height: 12px;
+    margin-block: 10px;
+}
+
 }
 
 
@@ -369,31 +388,8 @@ strong{
         text-align: center;
         height: 60vh;
     }
-    .dash-cart{
-        gap: 10px;
-        width: 300px ;
-        height: auto;
-    }
-        
-    /* .ads-flex-container{
-        margin: 10px 15%;
-        width: 90%;
-    } */
     .flex-item {
         margin: 18px 3px;
-    }
-    .dash-cart-data{
-        padding-inline: 25px;
-        padding-block: 0px;
-        padding-bottom: 15px;
-    }
-    .dash-address{
-        font-size: 18px;
-        line-height: 18px;
-    }
-    .dash-sub-heading{
-        font-size: 14px;
-        line-height: 14px;
     }
     .dashboard-total-ads {
         width: 75%;
@@ -405,6 +401,36 @@ strong{
     .dashboard-total-ads h2{
         font-size: 20px;
     }
+
+    .dash-cart{
+        width: 320px ;
+        height: auto;
+    }
+        
+    .ads-flex-container{
+        max-width: 72% !important;
+        gap: 0px;
+    }
+    .dash-cart-data{
+        padding-inline: 35px;
+        padding-block: 20px;
+    }
+    .dash-address{
+        font-size: 18px;
+        line-height: 26px;
+        margin-block: 10px;
+    }
+    .dash-sub-heading{
+        font-size: 13px;
+        line-height: 13px;
+        margin-block: 10px;
+    }
+    .dash-agent-compensation{
+        font-size: 12.5px;
+        line-height: 12px;
+        margin-block: 10px;
+    }
+
     }
 
 
@@ -415,35 +441,41 @@ strong{
         text-align: center;
         padding-inline: 10px;
     }
-    .dash-cart{
-        gap: 10px;
-        width: 300px ;
-        height: auto;
-    }
         
-    /* .ads-flex-container{
-        margin: 10px 10%;
-        width: 100%;
-    } */
     .flex-item {
         margin: 18px 3px;
-    }
-    .dash-cart-data{
-        padding-inline: 25px;
-        padding-block: 0px;
-        padding-bottom: 15px;
-    }
-    .dash-address{
-        font-size: 18px;
-        line-height: 18px;
-    }
-    .dash-sub-heading{
-        font-size: 14px;
-        line-height: 14px;
     }
     .dashboard-total-ads {
         width: 75%;
         height: 400px;
+    }
+
+    .dash-cart{
+        width: 300px ;
+        height: auto;
+    }
+        
+    .ads-flex-container{
+        max-width: 82% !important;
+    }
+    .dash-cart-data{
+        padding-inline: 35px;
+        padding-block: 20px;
+    }
+    .dash-address{
+        font-size: 18px;
+        line-height: 26px;
+        margin-block: 10px;
+    }
+    .dash-sub-heading{
+        font-size: 13px;
+        line-height: 13px;
+        margin-block: 10px;
+    }
+    .dash-agent-compensation{
+        font-size: 12px;
+        line-height: 12px;
+        margin-block: 10px;
     }
 
     }
@@ -454,36 +486,38 @@ strong{
             font-size: 25px;
             text-align: center;
         }
-        .dash-cart{
-            gap: 10px;
-            width: 280px ;
-            height: auto;
-        }
-            
-        /* .ads-flex-container{
-            margin: 10px 6%;
-            width: 100%;
-        } */
+
         .flex-item {
             margin: 18px 3px;
         }
-        .dash-cart-data{
-            padding-inline: 25px;
-            padding-block: 0px;
-            padding-bottom: 15px;
-        }
-        .dash-sub-heading{
-            font-size: 18px;
-            line-height: 18px;
-        }
-        .dash-address{
-            font-size: 16px;
-            line-height: 16px;
-        }
-        .dashboard-total-ads {
-            width: 85%;
-            height: 350px;
-        }
+
+    .dash-cart{
+        width: 290px ;
+        height: auto;
+    }
+        
+    .ads-flex-container{
+        max-width: 92% !important;
+    }
+    .dash-cart-data{
+        padding-inline: 35px;
+        padding-block: 20px;
+    }
+    .dash-address{
+        font-size: 16px;
+        line-height: 26px;
+        margin-block: 10px;
+    }
+    .dash-sub-heading{
+        font-size: 12px;
+        line-height: 12px;
+        margin-block: 10px;
+    }
+    .dash-agent-compensation{
+        font-size: 11px;
+        line-height: 11px;
+        margin-block: 10px;
+    }
         .dashboard-total-ads h3 {
             font-size: 75px;
         }
