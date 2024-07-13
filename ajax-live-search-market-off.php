@@ -41,17 +41,16 @@ if(mysqli_num_rows($result) > 0){
         echo '
                 </div>
                 <div class="dash-cart-data">
-                    <p class="dash-address">Street Address : ' . htmlspecialchars($row["ad_address"]) .'</p>
-                    <p class="dash-sub-heading">City : ' . htmlspecialchars($row["ad_city"]) . '</p>
-                    <p class="dash-sub-heading">Zip Code : ' . htmlspecialchars($row["ad_zipcode"]) . '</p>
-                    <p class="dash-sub-heading">Price : ' . htmlspecialchars($row["ad_price"]) . '</p>
-                    <p class="dash-sub-heading">Number of Bedrooms : ' . htmlspecialchars($row["ad_bedroom"]) . '</p>
-                    <p class="dash-sub-heading">Number of Bathrooms : ' . htmlspecialchars($row["ad_bathroom"]) . '</p>
-                    <p class="dash-sub-heading">Built Year : ' . htmlspecialchars($row["ad_year"]) . '</p>
-                    <p class="dash-sub-heading">Build : ' . htmlspecialchars($row["ad_size"]) . ' Sq. Ft</p>
-                    <p class="dash-sub-heading">Agent Commission : ' . htmlspecialchars($row["ad_commission"]) . '</p>
-                    <p class="dash-sub-heading">Seller Agent name : ' . htmlspecialchars($row["ad_agent_name"]) . '</p>
-                    <p class="dash-sub-heading">Seller Agent Phone : ' . htmlspecialchars($row["ad_agent_phone"]) . '</p>
+                    <p class="dash-address"><img src="lmages/icons8-location-50.png" width="20" alt="" srcset=""> ' . htmlspecialchars($row["ad_address"]) .'</p>
+                    <p class="dash-sub-heading"><img src="./lmages/icons8-city-buildings-50.png" width="20" alt="" srcset=""> ' . htmlspecialchars($row["ad_city"]) . ' || Zip-code :  ' . htmlspecialchars($row["ad_zipcode"]) . '</p>
+                    <p class="dash-sub-heading"><img src="./lmages/icons8-bedroom-50.png" width="20" alt="" srcset=""> ' . htmlspecialchars($row["ad_bedroom"]) . ' Bedroom</p>
+                    <p class="dash-sub-heading"><img src="./lmages/icons8-bathroom-50.png" width="20" alt="" srcset=""> ' . htmlspecialchars($row["ad_bathroom"]) . ' Bathroom</p>
+                    <p class="dash-sub-heading"><img src="./lmages/icons8-measurement-24.png" width="20" alt="" srcset=""> ' . htmlspecialchars($row["ad_size"]) . ' Sq. Ft</p>
+                    <p class="dash-sub-heading"><strong>Price : $ </strong>' . htmlspecialchars($row["ad_price"]) . '</p>
+                    <p class="dash-sub-heading"><strong>Built Year : </strong>' . htmlspecialchars($row["ad_year"]) . '</p>
+                    <p class="dash-sub-heading"><strong>Buyer&apos;s Agent Compensation: $</strong>' . htmlspecialchars($row["ad_commission"]) . '</p>
+                    <p class="dash-sub-heading"><strong>Seller&apos;s Agent Name : </strong>' . htmlspecialchars($row["ad_agent_name"]) . '</p>
+                    <p class="dash-sub-heading"><strong>Seller&apos;s Agent Phone : </strong>' . htmlspecialchars($row["ad_agent_phone"]) . '</p>
                 </div>
             </div>
 
