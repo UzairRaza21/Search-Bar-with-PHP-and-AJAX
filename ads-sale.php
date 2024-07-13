@@ -21,7 +21,9 @@
                 <li><a href="dashboard.php">Dashboard</a></li>
                 <li><a href="products-upload.php">Upload Ads</a></li>
                 <li><a href="productlist.php">Ads List</a></li>
-                <li><a href="products.php">Goto Website</a></li>
+                <li><a href="ads-sale.php">Sale</a></li>
+                <li><a href="ads-lease.php">Lease</a></li>
+                <li><a href="ads-market-off.php">Market Off</a></li>
                 <li><a href="logout.php">Logout</a></li>
             </ul>
         </div>
@@ -33,17 +35,19 @@
     
     <div id="nav-col">
         <div id="nav-col-links" class="nav-col-links">
-            <a href="dashboard.php">Dashboard</a>
-            <a href="products-upload.php">Upload Ads</a>
-            <a href="productlist.php">Ads List</a>
-            <a href="products.php">Goto Website</a>
-            <a href="logout.php">Logout</a>
+            <a id="link"  href="dashboard.php">Dashboard</a>
+            <a id="link" href="products-upload.php">Upload Ads</a>
+            <a id="link" href="productlist.php">Ads List</a>
+            <a id="link" href="ads-sale.php">Sale</a>
+            <a id="link" href="ads-lease.php">Lease</a>
+            <a id="link" href="ads-market-off.php">Market Off</a>
+            <a id="link" href="logout.php">Logout</a>
         </div>
     </div>
     <!-- Nav End -->
 
     <div class="ads-hero-section">
-        <h1>Property Listings</h1>
+        <h1>Property Listings-Sale</h1>
     </div>
 
     <!-- Live Search HTML Code Start -->

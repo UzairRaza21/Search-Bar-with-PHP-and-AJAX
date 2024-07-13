@@ -27,7 +27,9 @@ if (!isset($_SESSION['admin_name'])){
             <li><a href="dashboard.php">Dashboard</a></li>
             <li><a href="products-upload.php">Upload Ads</a></li>
             <li><a href="productlist.php">Ads List</a></li>
-            <li><a href="products.php">Go to Website</a></li>
+            <li><a href="ads-sale.php">Sale</a></li>
+            <li><a href="ads-lease.php">Lease</a></li>
+            <li><a href="ads-market-off.php">Market Off</a></li>
             <li><a href="logout.php">Logout</a></li>
 
         </ul>
@@ -43,7 +45,10 @@ if (!isset($_SESSION['admin_name'])){
         <a id="link" href="dashboard.php">Dashboard</a>
         <a id="link" href="products-upload.php">Upload Ads</a>
         <a id="link" href="productlist.php">Ads List</a>
-        <a id="link" href="products.php">Go to Website</a>
+        <a id="link" href="ads-sale.php">Sale</a>
+        <a id="link" href="ads-lease.php">Lease</a>
+        <a id="link" href="ads-market-off.php">Market Off</a>
+        <a id="link" href="logout.php">Log out</a>
     </div>
 </div>
 

@@ -28,8 +28,9 @@ if (!isset($_SESSION['admin_name'])){
         <ul id="nav-links">
             <li><a href="dashboard.php">Dashboard</a></li>
             <li><a href="products-upload.php">Upload Ads</a></li>
-            <li><a href="productlist.php">Ads List</a></li>
-            <li><a href="products.php">Goto Website</a></li>
+            <li><a href="ads-sale.php">Sale</a></li>
+            <li><a href="ads-lease.php">Lease</a></li>
+            <li><a href="ads-market-off.php">Market Off</a></li>
             <li><a href="logout.php">Logout</a></li>
         </ul>
     </div>
@@ -44,8 +45,10 @@ if (!isset($_SESSION['admin_name'])){
         <a id="link" href="dashboard.php">Dashboard</a>
         <a id="link" href="products-upload.php">Upload Ads</a>
         <a id="link" href="productlist.php">Ads List</a>
-        <a id="link" href="products.php">Goto Website</a>
-        <a id="link" href="logout.php">Logout</a>
+        <a id="link" href="ads-sale.php">Sale</a>
+        <a id="link" href="ads-lease.php">Lease</a>
+        <a id="link" href="ads-market-off.php">Market Off</a>
+        <a id="link" href="logout.php">Log out</a>
     </div>
 </div>
 <!-- Nav End -->
@@ -75,6 +78,7 @@ if (!isset($_SESSION['admin_name'])){
                     <th scope="col">Agent's Name</th>
                     <th scope="col">Agent's Phone</th>
                     <th scope="col">Built Year</th>
+                    <th scope="col">Category</th>
                     <th scope="col">Property Image</th>
                     <th scope="col">Action</th>
                 </tr>
@@ -100,6 +104,7 @@ if (!isset($_SESSION['admin_name'])){
                         <td><?php echo $row['ad_agent_name']; ?></td>
                         <td><?php echo $row['ad_agent_phone']; ?></td>
                         <td><?php echo $row['ad_year']; ?></td>
+                        <td><?php echo $row['ad_category']; ?></td>
                         <td><?php echo "<img style='width: 150px; height: 80px; border-radius: 5px;' src='uploaded-Products/" . $main_image . "' >"; ?></td>
                         <td>
                             <!-- Edit button -->

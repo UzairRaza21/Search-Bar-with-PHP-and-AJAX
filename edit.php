@@ -32,6 +32,7 @@ if ($row > 0) {
         $pagent_name = $_POST['property_agent_name'];
         $pagent_phone = $_POST['property_agent_phone'];
         $pyear = $_POST['property_year'];
+        $pcategory = $_POST['property_category'];
 
         // Handle multiple image uploads
         $pimage_names = array();
@@ -62,7 +63,8 @@ if ($row > 0) {
             `ad_bedroom`='$pbedroom', 
             `ad_bathroom`='$pbathroom', 
             `ad_agent_name`='$pagent_name', 
-            `ad_agent_phone`='$pagent_phone' 
+            `ad_agent_phone`='$pagent_phone', 
+            `ad_category` = '$pcategory'
             WHERE ad_id = $adid";
         $result_update = mysqli_query($conn, $sql_update) or die('Failed to update record');
 
@@ -100,6 +102,9 @@ if ($row > 0) {
             <li><a href="products-upload.php">Upload Ads</a></li>
             <li><a href="productlist.php">Ads List</a></li>
             <li><a href="products.php">Go to Website</a></li>
+            <li><a href="ads-sale.php">Sale</a></li>
+            <li><a href="ads-lease.php">Lease</a></li>
+            <li><a href="ads-market-off.php">Market Off</a></li>
             <li><a href="logout.php">Logout</a></li>
         </ul>
     </div>
@@ -114,8 +119,10 @@ if ($row > 0) {
         <a id="link" href="dashboard.php">Dashboard</a>
         <a id="link" href="products-upload.php">Upload Ads</a>
         <a id="link" href="productlist.php">Ads List</a>
-        <a id="link" href="products.php">Go to Website</a>
-        <a id="link" href="logout.php">Logout</a>
+        <a id="link" href="ads-sale.php">Sale</a>
+        <a id="link" href="ads-lease.php">Lease</a>
+        <a id="link" href="ads-market-off.php">Market Off</a>
+        <a id="link" href="logout.php">Log out</a>
     </div>
 </div>
 <!-- Navigation Section End -->
@@ -178,6 +185,22 @@ if ($row > 0) {
             <label for="property_year">Built Year</label>
             <input type="text" name="property_year" id="property-year" value="<?php echo $property['ad_year']; ?>" style="margin-left: 10px;width:200px">
         </div><br>
+
+        <div class="product-form-field">
+            <label for="property-year">Category</label>
+            <?php
+                $currentCategory = 'ad_category'; // Example value
+
+                function isSelected($value, $currentCategory) {
+                return $value == $currentCategory ? 'selected' : '';
+                }
+                ?>
+            <select name="property_category" id="property_category" style="margin-left: 85px;width:260px;height: 30px;border-radius: 5px">
+                <option value="sale" <?php echo isSelected('sale', $currentCategory); ?> >Sale</option>
+                <option value="lease" <?php echo isSelected('lease', $currentCategory); ?>>Lease</option>
+                <option value="market-off" <?php echo isSelected('market-off', $currentCategory); ?>>Market Off</option>
+            </select>
+            </div><br>
 
         <div class="product-form-field">
             <label for="property-images">Property Images</label>

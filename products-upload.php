@@ -25,7 +25,9 @@ if (!isset($_SESSION['admin_name'])){
                 <li><a href="dashboard.php">Dashboard</a></li>
                 <li><a href="products-upload.php">Upload Ads</a></li>
                 <li><a href="productlist.php">Ads List</a></li>
-                <li><a href="products.php">Goto Website</a></li>
+                <li><a href="ads-sale.php">Sale</a></li>
+                <li><a href="ads-lease.php">Lease</a></li>
+                <li><a href="ads-market-off.php">Market Off</a></li>
                 <li><a href="logout.php">Logout</a></li>
             </ul>
         </div>
@@ -40,8 +42,10 @@ if (!isset($_SESSION['admin_name'])){
                     <a id="link" href="dashboard.php">Dashboard</a>
                     <a id="link" href="products-upload.php">Upload Ads</a>
                     <a id="link" href="productlist.php">Ads List</a>
-                    <a id="link" href="products.php">Goto Website</a>
-                    <a id="link" href="logout.php">Logout</a>
+                    <a id="link" href="ads-sale.php">Sale</a>
+                    <a id="link" href="ads-lease.php">Lease</a>
+                    <a id="link" href="ads-market-off.php">Market Off</a>
+                    <a id="link" href="logout.php">Log out</a>
         </div>
     </div>
     <!-- Nav End -->
@@ -108,6 +112,15 @@ if (!isset($_SESSION['admin_name'])){
             <div class="product-form-field">
             <label for="property-year">Built Year</label>
             <input type="text" name="property_year" id="property-year" style="margin-left: 85px;width:250px;height: 25px;border-radius: 5px">
+            </div><br>
+
+            <div class="product-form-field">
+            <label for="property-year">Category</label>
+            <select name="property_category" id="property_category" style="margin-left: 85px;width:260px;height: 30px;border-radius: 5px">
+                <option value="sale">Sale</option>
+                <option value="lease">Lease</option>
+                <option value="market-off">Market Off</option>
+            </select>
             </div><br>
 
             <div class="product-form-field">

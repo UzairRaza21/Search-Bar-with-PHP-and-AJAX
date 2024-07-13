@@ -14,6 +14,7 @@ if(isset($_POST['upload_ad'])){
     $pagent_name = $_POST['property_agent_name'];
     $pagent_phone = $_POST['property_agent_phone'];
     $pyear = $_POST['property_year'];
+    $pcategory = $_POST['property_category'];
 
     // Initialize an array to hold the image file names
     $pimage_names = [];
@@ -50,13 +51,19 @@ if(isset($_POST['upload_ad'])){
     // Convert the array of image names to a JSON string
     $pimage_names_json = json_encode($pimage_names);
 
-    $sql = "INSERT INTO `ads`(`ad_address`, `ad_price`, `ad_size`, `ad_year`, `ad_commission`, `ad_img`, `ad_city`, `ad_zipcode`, `ad_bedroom`, `ad_bathroom`, `ad_agent_name`, `ad_agent_phone`) 
-            VALUES ('{$paddress}', '{$pprice}', '{$psize}', '{$pyear}', '{$pcommission}', '{$pimage_names_json}', '{$pcity}', '{$pzipcode}', '{$pbedroom}', '{$pbathroom}', '{$pagent_name}', '{$pagent_phone}')";
+    $sql = "INSERT INTO `ads`(`ad_address`, `ad_price`, `ad_size`, `ad_year`, `ad_commission`, `ad_img`, `ad_city`, `ad_zipcode`, `ad_bedroom`, `ad_bathroom`, `ad_agent_name`, `ad_agent_phone`, `ad_category`) 
+            VALUES ('{$paddress}', '{$pprice}', '{$psize}', '{$pyear}', '{$pcommission}', '{$pimage_names_json}', '{$pcity}', '{$pzipcode}', '{$pbedroom}', '{$pbathroom}', '{$pagent_name}', '{$pagent_phone}', '{$pcategory}')";
 
     $result = mysqli_query($conn, $sql) or die ("Query not successful: " . mysqli_error($conn));
    
     mysqli_close($conn);
-    header("location: products.php");
+    if($pcategory == "sale"){
+        header("location: ads-sale.php");
+    }else if($pcategory == "lease"){
+        header("location: ads-lease.php");
+    }else{
+        header("location: ads-market-off.php");
+    }
     exit();
 }
 ?>
