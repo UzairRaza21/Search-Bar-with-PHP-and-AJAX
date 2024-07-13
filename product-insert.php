@@ -30,10 +30,10 @@ if(isset($_POST['upload_ad'])){
             $pimage_path = $upload_dir . basename($pimage_name);
 
             // Check file type and size (optional)
-            $allowed_types = ['image/jpeg', 'image/png', 'image/gif'];
-            $max_size = 2 * 1024 * 1024; // 2 MB
+            $allowed_types = ['image/jpeg', 'image/png', 'image/gif', 'image/jpg'];
+            //$max_size = 2 * 1024 * 1024; // 2 MB
 
-            if (in_array($_FILES['property_image']['type'][$key], $allowed_types) && $_FILES['property_image']['size'][$key] <= $max_size) {
+            if (in_array($_FILES['property_image']['type'][$key], $allowed_types) && $_FILES['property_image']['size'][$key]) {
                 if (move_uploaded_file($pimage_temp_name, $pimage_path)) {
                     // Add the file name to the array
                     $pimage_names[] = $pimage_name;

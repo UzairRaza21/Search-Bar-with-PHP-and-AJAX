@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ads Listing</title>
-    <link rel="stylesheet" href="dash.css">
+    <link rel="stylesheet" href="dash-real.css">
     <!-- Include Slick Slider CSS -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
@@ -19,12 +19,10 @@
         <div>
             <ul id="nav-links">
                 <li><a href="dashboard.php">Dashboard</a></li>
-                <li><a href="products-upload.php">Upload Ads</a></li>
-                <li><a href="productlist.php">Ads List</a></li>
                 <li><a href="ads-sale.php">Sale</a></li>
                 <li><a href="ads-lease.php">Lease</a></li>
                 <li><a href="ads-market-off.php">Market Off</a></li>
-                <li><a href="logout.php">Logout</a></li>
+                <li><a href="">Join Dash</a></li>
             </ul>
         </div>
 
@@ -35,13 +33,10 @@
     
     <div id="nav-col">
         <div id="nav-col-links" class="nav-col-links">
-            <a id="link"  href="dashboard.php">Dashboard</a>
-            <a id="link" href="products-upload.php">Upload Ads</a>
-            <a id="link" href="productlist.php">Ads List</a>
             <a id="link" href="ads-sale.php">Sale</a>
             <a id="link" href="ads-lease.php">Lease</a>
             <a id="link" href="ads-market-off.php">Market Off</a>
-            <a id="link" href="logout.php">Logout</a>
+            <a id="link" href="">Join Dash</a>
         </div>
     </div>
     <!-- Nav End -->
@@ -113,7 +108,7 @@
         <?php
             }
         } else {
-            echo "<h4>No Products</h4>";
+            echo "<h4>No Property Found</h4>";
         }
 
         mysqli_close($conn);
@@ -129,7 +124,7 @@
             $('#search').on("keyup", function(e) {
                 var search_term = $(this).val();
                 $.ajax({
-                    url: "ajax-live-search.php",
+                    url: "ajax-live-search-market-off.php",
                     type: "POST",
                     data: { search: search_term },
                     success: function(data) {
