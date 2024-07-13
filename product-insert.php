@@ -57,6 +57,7 @@ if(isset($_POST['upload_ad'])){
     $result = mysqli_query($conn, $sql) or die ("Query not successful: " . mysqli_error($conn));
    
     mysqli_close($conn);
+
     if($pcategory == "sale"){
         header("location: ads-sale.php");
     }else if($pcategory == "lease"){
@@ -64,6 +65,7 @@ if(isset($_POST['upload_ad'])){
     }else{
         header("location: ads-market-off.php");
     }
+    
     exit();
 }
 ?>

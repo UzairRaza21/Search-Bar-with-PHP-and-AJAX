@@ -62,7 +62,7 @@
     <div id="ads-container" class="ads-flex-container">
         <?php
         include("conn.php");
-        $sql = "SELECT * FROM ads";
+        $sql = "SELECT * FROM ads WHERE `ad_category` = 'lease'";
         $result = mysqli_query($conn, $sql);
 
         if (mysqli_num_rows($result) > 0) {
