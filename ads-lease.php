@@ -46,7 +46,7 @@
     <!-- Live Search HTML Code Start -->
     <div class="ads-search-bar" >
         <label for="search">Search :</label>
-        <input type="text" id="search" autocomplete="off" placeholder="Search Property here">
+        <input type="text" id="search" autocomplete="off" placeholder="Zip-code, City and Address">
     </div>
     <!-- Live Search HTML Code End -->
 
