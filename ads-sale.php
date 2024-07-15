@@ -22,7 +22,7 @@
                 <li><a href="ads-sale.php">Sale</a></li>
                 <li><a href="ads-lease.php">Lease</a></li>
                 <li><a href="ads-market-off.php">Market Off</a></li>
-                <li><a href="">Join Dash</a></li>
+                <li><a href="https://joindash.com/our-team/"><button class="join-dash-button">Join Dash</button></a></li>
             </ul>
         </div>
 
@@ -34,7 +34,7 @@
             <a id="link" href="ads-sale.php">Sale</a>
             <a id="link" href="ads-lease.php">Lease</a>
             <a id="link" href="ads-market-off.php">Market Off</a>
-            <a id="link" href="">Join Dash</a>
+            <a id="link" href="https://joindash.com/our-team/"></a>
         </div>
     </div>
     <!-- Nav End -->

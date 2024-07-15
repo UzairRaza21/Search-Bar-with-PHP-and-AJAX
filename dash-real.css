@@ -32,6 +32,7 @@ nav {
     display: flex;
     list-style: none;
     padding: 10px;
+    align-items: center;
 }
 #nav-links a{
     text-decoration: none;
@@ -41,6 +42,24 @@ nav {
     transition-duration: 500ms;
     font-size: 18px;
     font-weight: 600;
+}
+.join-dash-button{
+    background-color: #085080 ;
+    color: white ;
+    padding: 10px 15px;
+    border: 0px;
+    border-radius: 10px;
+    font-family: "Poppins";
+    font-size: 16px;
+    margin-inline: 10px;
+    cursor: pointer;
+    transition: all 500ms;
+    overflow: hidden;
+    border: 1px solid #085080;
+}
+.join-dash-button:hover{
+    background-color: #e6edf2;
+    color: #085080 ;
 }
 #logo-pic{
     display: flex;
@@ -57,23 +76,30 @@ nav {
 #menu{
     display: flex;
     align-items: center; 
+    cursor: pointer;
+    font-size: 25px;
+    transition: all 500ms;
 }
 #menu:hover{
-    box-shadow: 20px white;
+    text-shadow: 1px 1px 2px #085080;
 }
 .nav-col-links{
     display: none;
+    position: absolute;
+    width: 100%;
+    top: 80px;
 }
 
 #nav-col-links a{
     text-decoration: none;
-    color: white;
-    background-color: rgb(156, 152, 152);
+    color: #085080;
+    background-color: #e6edf2;
     transition: all;
     transition-duration: 500ms;
+    font-weight: 600;
 }
 #nav-col-links a:hover{
-    color: rgba(201, 205, 243, 0.575);
+    color: #e6edf2;
 }
 #link{
     padding: 10px;
@@ -92,13 +118,16 @@ nav {
     justify-items: center;
     align-items:center ;
 }
-
+.product-form h1{
+    font-size: 22px;
+}
 .product-upload-button{
     width: 200px;
     height: 40px;
     background-color: #085080;
     color: whitesmoke;
     transition: all 500ms;
+    margin-left: 200px;
 }
 .product-upload-button a{
     text-decoration: none;
@@ -122,8 +151,12 @@ nav {
     border: 1px solid #085080;
     border-radius: 10px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-block: 10px;
 }
- 
+
 .login-body{
     display: flex;
     justify-content: center ;
@@ -187,9 +220,28 @@ nav {
 }
 
 .product-form-field{
-    width: 500px;
+    width: 450px;
     display: flex;
     justify-content: space-between;
+    margin-block: 5px;
+}
+.product-form-field input{
+    border: 1px solid black;
+    height: 20px;
+    border-radius: 5px;
+    width: 250px;
+    font-size: 14px;
+}
+.product-form-field label{
+    font-size: 15px;
+}
+.product-form-field select{
+    height: 22px;
+    border-radius: 5px;
+    width: 255px;
+    border: 1px solid black;
+    font-family: "Poppins";
+    font-size: 14px;
 }
 .dash-cart{
     display: flex;
@@ -301,7 +353,19 @@ strong{
     line-height: 12px;
     margin-block: 10px;
 }
-
+.dashboard-total-ads h3 {
+    font-size: 90px;
+    line-height: 90px;
+}
+.dashboard-total-ads {
+    width: 18%;
+    height: 380px;
+    padding-block: auto;
+}
+.dashboard-total-ads h2 {
+    font-size: 20px;
+    line-height: 20px;
+}
 }
 
 @media screen and (max-width: 1024px) {
@@ -335,6 +399,10 @@ strong{
     line-height: 12px;
     margin-block: 10px;
 }
+.dashboard-total-ads {
+    width: 25%;
+    height: 350px;
+}
 
 }
 
@@ -345,7 +413,7 @@ strong{
     display: flex !important;
 }
 .dashboard-total-ads {
-    width: 50%;
+    width: 30%;
 }
 .ads-hero-section{
     font-size: 35px;
@@ -392,14 +460,15 @@ strong{
         margin: 18px 3px;
     }
     .dashboard-total-ads {
-        width: 75%;
-        height: 350px;
+        width: 60%;
+        height: 320px;
     }
     .dashboard-total-ads h3 {
-        font-size: 90px;
+        font-size: 80px;
+        line-height: 80px;
     }
     .dashboard-total-ads h2{
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .dash-cart{
@@ -430,7 +499,13 @@ strong{
         line-height: 12px;
         margin-block: 10px;
     }
-
+    .product-form-field {
+        width: 300px;
+        flex-direction: column;
+    }
+    .product-upload-button{
+    margin-left: auto;
+}
     }
 
 
@@ -446,8 +521,8 @@ strong{
         margin: 18px 3px;
     }
     .dashboard-total-ads {
-        width: 75%;
-        height: 400px;
+        width: 60%;
+        height: 320px;
     }
 
     .dash-cart{
@@ -528,6 +603,10 @@ strong{
 @media screen and (max-width: 800px) {
     #nav-links{
         display: none;
+        position: absolute;
+        top: 80px;
+        width: 100%;
+        z-index: 9;
     }
 
 }
