@@ -79,6 +79,7 @@ nav {
     cursor: pointer;
     font-size: 25px;
     transition: all 500ms;
+    margin-block: 30px;
 }
 #menu:hover{
     text-shadow: 1px 1px 2px #085080;
@@ -154,7 +155,7 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-block: 10px;
+    padding: 10px;
 }
 
 .login-body{
@@ -360,7 +361,6 @@ strong{
 .dashboard-total-ads {
     width: 18%;
     height: 380px;
-    padding-block: auto;
 }
 .dashboard-total-ads h2 {
     font-size: 20px;
@@ -408,6 +408,9 @@ strong{
 
 
 @media screen and (max-width: 768px){
+nav {
+    padding-block: 10px;
+}
 .flex-item{
     margin: 18px 3px;
     display: flex !important;
@@ -516,6 +519,14 @@ strong{
 }
 .login-section h3 {
     font-size: 26px;
+}
+.ads-search-bar input {
+    width: 200px;
+    height: 25px;
+    font-size: 12px;
+}
+    .ads-search-bar {
+    font-size: 16px;
 }
     }
 
