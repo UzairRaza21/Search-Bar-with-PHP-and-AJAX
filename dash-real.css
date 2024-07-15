@@ -506,6 +506,17 @@ strong{
     .product-upload-button{
     margin-left: auto;
 }
+.login-section input {
+    width: 265px;
+    height: 35px;
+    font-size: 14px;
+}
+.login-section label {
+    font-size: 15px;
+}
+.login-section h3 {
+    font-size: 26px;
+}
     }
 
 
@@ -598,6 +609,17 @@ strong{
         }
         .dashboard-total-ads h2{
             font-size: 18px;
+        }
+        .login-section input {
+            width: 230px;
+            height: 35px;
+            font-size: 12px;
+        }
+        .login-section label {
+            font-size: 13px;
+        }
+        .login-section h3 {
+            font-size: 24px;
         }
         }
 @media screen and (max-width: 800px) {
