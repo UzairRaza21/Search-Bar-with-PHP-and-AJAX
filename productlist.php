@@ -87,7 +87,7 @@ if (!isset($_SESSION['admin_name'])){
                     // Get main image (first image) from the list of images
                     $images = explode(',', $row['ad_img']);
                     $main_image = $images[0]; // First image as main image
-
+ 
                 ?>
                     <tr>
                         <th scope="row"><?php echo $row['ad_id']; ?></th>

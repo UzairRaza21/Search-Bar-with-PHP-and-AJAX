@@ -26,7 +26,7 @@ if(mysqli_num_rows($result) > 0){
         $image_names = json_decode($row['ad_img'], true);
 
         echo '
-        <a href="ad-details.php">
+        <a href="ad-details.php?adid=' . $row['ad_id'] . '" >
         <div class="flex-item">
 
             <div class="dash-cart">

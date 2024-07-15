@@ -61,7 +61,7 @@
         if (mysqli_num_rows($result) > 0) {
             while ($row = mysqli_fetch_assoc($result)) {
         ?> 
-                <a href="ad-details.php">
+                <a href="ad-details.php?adid=<?php echo $row['ad_id']; ?>">
                 <div class="flex-item">
                     <div class="dash-cart">
                         <div class="dash-cart-img">

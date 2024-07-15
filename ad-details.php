@@ -39,8 +39,19 @@
     </div>
     <!-- Nav End -->
 
+    <div class="selected-ads-details">
+        <div class="selected-ads-pics-slider">
 
-    
+        </div>
+
+        <div class="selected-ads-data">
+            
+        </div>
+
+    </div>
+
+
+
 
 
 
