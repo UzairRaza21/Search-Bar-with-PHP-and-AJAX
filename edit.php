@@ -4,7 +4,7 @@ include "conn.php";
 
 // Redirect to login page if admin is not logged in
 if (!isset($_SESSION['admin_name'])){
-    header("location: login-page.php");
+    header("location: index.php");
     exit; // Exit to prevent further script execution
 }
 

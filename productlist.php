@@ -2,7 +2,7 @@
 session_start();
 include "conn.php";
 if (!isset($_SESSION['admin_name'])){
-    header("location: login-page.php");
+    header("location: index.php");
     exit; // Add exit after header redirect
 }
 ?>

@@ -1,4 +1,3 @@
-<!-- Delete Start -->
 <?php
 
 include("conn.php");
@@ -10,4 +9,3 @@ mysqli_close($conn);
 
 ?>
 
-<!-- Delete End -->
