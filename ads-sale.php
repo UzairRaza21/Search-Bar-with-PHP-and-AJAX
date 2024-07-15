@@ -91,10 +91,10 @@
 
                         <div class="dash-cart-data">
                             <p class="dash-address"><img src="lmages/icons8-location-50.png" width="20" alt="" srcset=""> <?php echo htmlspecialchars($row['ad_address']); ?></p>
-                            <p class="dash-sub-heading"><img src="./lmages/icons8-city-buildings-50.png" width="20" alt="" srcset=""> <?php echo htmlspecialchars($row['ad_city']); ?> || Zip-code: <?php echo htmlspecialchars($row['ad_zipcode']); ?> </p>
-                            <p class="dash-sub-heading"><img src="./lmages/icons8-bedroom-50.png" width="20" alt="" srcset=""> <?php echo htmlspecialchars($row['ad_bedroom']); ?> Bedroom</p>
-                            <p class="dash-sub-heading"><img src="./lmages/icons8-bathroom-50.png" width="20" alt="" srcset=""> <?php echo htmlspecialchars($row['ad_bathroom']); ?> Bathroom</p>
-                            <p class="dash-sub-heading"><img src="./lmages/icons8-measurement-24.png" width="20" alt="" srcset=""> <?php echo htmlspecialchars($row['ad_size']); ?> Sq Ft.</p>
+                            <p class="dash-sub-heading"><img src="lmages/icons8-city-buildings-50.png" width="20" alt="" srcset=""> <?php echo htmlspecialchars($row['ad_city']); ?> || Zip-code: <?php echo htmlspecialchars($row['ad_zipcode']); ?> </p>
+                            <p class="dash-sub-heading"><img src="lmages/icons8-bedroom-50.png" width="20" alt="" srcset=""> <?php echo htmlspecialchars($row['ad_bedroom']); ?> Bedroom</p>
+                            <p class="dash-sub-heading"><img src="lmages/icons8-bathroom-50.png" width="20" alt="" srcset=""> <?php echo htmlspecialchars($row['ad_bathroom']); ?> Bathroom</p>
+                            <p class="dash-sub-heading"><img src="lmages/icons8-measurement-24.png" width="20" alt="" srcset=""> <?php echo htmlspecialchars($row['ad_size']); ?> Sq Ft.</p>
                             <p class="dash-sub-heading"><strong>Price : $ </strong><?php echo htmlspecialchars($row['ad_price']); ?></p>
                             <p class="dash-sub-heading"><strong>Built Year : </strong><?php echo htmlspecialchars($row['ad_year']); ?></p>
                             <p class="dash-agent-compensation"><strong>Buyer's Agent Compensation: $</strong><?php echo htmlspecialchars($row['ad_commission']); ?></p>
