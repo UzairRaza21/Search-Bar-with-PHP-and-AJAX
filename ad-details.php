@@ -87,10 +87,6 @@ if (mysqli_num_rows($result) > 0) {
 
         </div>
 
-
-
-
-
     <div class="selected-ads-data">
             <!-- 1 -->
              <div class="selected-ad-price">
